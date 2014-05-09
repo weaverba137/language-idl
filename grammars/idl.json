@@ -19,6 +19,16 @@
                     "name": "comment.line.semicolon.idl"
                 }
             ]
+        },
+        {
+            "include": "#number"
         }
-    ]
+    ],
+    "repository": {
+        "number": {
+            "comment": "Valid numbers 1[bB], 1(sS|), 1[uU], 1[lL], 1[uU][lL], 1[lL][lL], 1[uU][lL][lL], .1, 1.1, .1e1, 1.1e1, 1e1, .1[dD], 1.1[dD], .1[dD]1, 1.1[dD]1",
+            "match": "(?<=[\\s\\-\\+\\*\\/\\\\=:\\[\\(\\{,]|^)(\\d|\\.)\\d*(\\.\\d*)?((?i)b|s|ul?l?|ll?|e|d|)([+-]?\\d+)?",
+            "name": "constant.numeric.idl"
+        }
+    }
 }
