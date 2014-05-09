@@ -1,5 +1,10 @@
 # Changes
 
+## 0.0.4 - Functions and Procedures
+
+* Try to identify functions and procedures.  Don't try to distinguish
+  built-ins at this point.
+
 ## 0.0.3 - Strings
 
 * Add highlighting of strings. It's pretty basic at this point.  There could

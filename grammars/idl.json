@@ -28,8 +28,10 @@
         },
         {
             "include": "#double-quoted-string"
+        },
+        {
+            "include": "#procedure"
         }
-
     ],
     "repository": {
         "number": {
@@ -46,6 +48,11 @@
             "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
             "match": "\"[^\"]*\"",
             "name": "string.quoted.double.idl"
+        },
+        "procedure": {
+            "comment": "Capture anything that looks like a procedure, narrow this down later",
+            "match": "^\\s*[a-zA-Z0-9_]+(?=,)",
+            "name": "support.function.idl"
         }
     }
 }
