@@ -22,13 +22,30 @@
         },
         {
             "include": "#number"
+        },
+        {
+            "include": "#single-quoted-string"
+        },
+        {
+            "include": "#double-quoted-string"
         }
+
     ],
     "repository": {
         "number": {
             "comment": "Valid numbers 1[bB], 1(sS|), 1[uU], 1[lL], 1[uU][lL], 1[lL][lL], 1[uU][lL][lL], .1, 1.1, .1e1, 1.1e1, 1e1, .1[dD], 1.1[dD], .1[dD]1, 1.1[dD]1",
             "match": "(?<=[\\s\\-\\+\\*\\/\\\\=:\\[\\(\\{,]|^)(\\d|\\.)\\d*(\\.\\d*)?((?i)b|s|ul?l?|ll?|e|d|)([+-]?\\d+)?",
             "name": "constant.numeric.idl"
+        },
+        "single-quoted-string": {
+            "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
+            "match": "'[^']*'",
+            "name": "string.quoted.single.idl"
+        },
+        "double-quoted-string": {
+            "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
+            "match": "\"[^\"]*\"",
+            "name": "string.quoted.double.idl"
         }
     }
 }
