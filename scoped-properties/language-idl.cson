@@ -1,0 +1,3 @@
+'.source.idl':
+  'editor':
+    'commentStart': '; '

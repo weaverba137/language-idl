@@ -1,0 +1,12 @@
+{
+  "name": "language-idl",
+  "version": "0.0.0",
+  "description": "IDL language support in Atom",
+  "repository": "https://github.com/weaverba137/language-idl",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

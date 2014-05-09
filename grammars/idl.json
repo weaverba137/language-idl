@@ -1,0 +1,24 @@
+{
+    "name": "IDL",
+    "scopeName": "source.idl",
+    "fileTypes": [ "pro" ],
+    "patterns": [
+        {
+            "begin": "(^[ \\t]+)?(?=;)",
+            "beginCaptures": {
+                    "1": {"name": "punctuation.whitespace.comment.leading.idl"}
+                },
+            "end": "(?!\\G)",
+            "patterns": [
+                {
+                    "begin": ";",
+                    "beginCaptures": {
+                            "0": {"name": "punctuation.definition.comment.idl"}
+                        },
+                    "end": "\\n",
+                    "name": "comment.line.semicolon.idl"
+                }
+            ]
+        }
+    ]
+}
