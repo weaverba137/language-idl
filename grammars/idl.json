@@ -21,7 +21,24 @@
             ]
         },
         {
-            "include": "#number"
+            "comment": "What the heck does the 'of' reserved word do?",
+            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|on_ioerror|pro|repeat|switch|then|until|while)",
+            "name": "keyword.control.idl"
+        },
+        {
+            "comment": "These are the 'text' operators in IDL.",
+            "match": "\\b(?i:and|eq|ge|gt|le|lt|mod|ne|not|or|xor)=?\\b",
+            "name": "keyword.operator.idl"
+        },
+        {
+            "comment": "The system variables.  Some are read-only, some are not & they can be created on the fly.",
+            "match": "![a-zA-Z][a-zA-Z0-9_.]+\\b",
+            "name": "constant.language.idl"
+        },
+        {
+            "comment": "Valid numbers 1[bB], 1(sS|), 1[uU], 1[lL], 1[uU][lL], 1[lL][lL], 1[uU][lL][lL], .1, 1.1, .1e1, 1.1e1, 1e1, .1[dD], 1.1[dD], .1[dD]1, 1.1[dD]1",
+            "match": "(?<=[\\s\\-\\+\\*\\/\\\\=:\\[\\(\\{,]|^)(\\d|\\.)\\d*(\\.\\d*)?(?i:b|s|ul?l?|ll?|e|d|)(?:[+-]?\\d+)?",
+            "name": "constant.numeric.idl"
         },
         {
             "include": "#single-quoted-string"
@@ -30,15 +47,40 @@
             "include": "#double-quoted-string"
         },
         {
-            "include": "#procedure"
+            "include": "#functions-j"
+        },
+        {
+            "include": "#functions-k"
+        },
+        {
+            "include": "#functions-n"
+        },
+        {
+            "include": "#procedures-j"
+        },
+        {
+            "include": "#procedures-n"
+        },
+        {
+            "include": "#procedures-o"
+        },
+        {
+            "include": "#procedures-p"
+        },
+        {
+            "include": "#procedures-q"
+        },
+        {
+            "include": "#procedures-r"
+        },
+        {
+            "include": "#procedures-s"
+        },
+        {
+            "include": "#procedures-z"
         }
     ],
     "repository": {
-        "number": {
-            "comment": "Valid numbers 1[bB], 1(sS|), 1[uU], 1[lL], 1[uU][lL], 1[lL][lL], 1[uU][lL][lL], .1, 1.1, .1e1, 1.1e1, 1e1, .1[dD], 1.1[dD], .1[dD]1, 1.1[dD]1",
-            "match": "(?<=[\\s\\-\\+\\*\\/\\\\=:\\[\\(\\{,]|^)(\\d|\\.)\\d*(\\.\\d*)?((?i)b|s|ul?l?|ll?|e|d|)([+-]?\\d+)?",
-            "name": "constant.numeric.idl"
-        },
         "single-quoted-string": {
             "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
             "match": "'[^']*'",
@@ -49,9 +91,59 @@
             "match": "\"[^\"]*\"",
             "name": "string.quoted.double.idl"
         },
-        "procedure": {
-            "comment": "Capture anything that looks like a procedure, narrow this down later",
-            "match": "^\\s*[a-zA-Z0-9_]+(?=,)",
+        "functions-j": {
+            "comment": "IDL built-in functions that begin with J.",
+            "match": "(?i:julday)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-k": {
+            "comment": "IDL built-in functions that begin with K.",
+            "match": "(?i:keyword_set|krig2d|kurtosis|kw_test)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-n": {
+            "comment": "IDL built-in functions that begin with N.  NCDF routines are not included yet.",
+            "match": "(?i:n_elements|n_params|n_tags|newton|noise_hurl|noise_pick|noise_scatter|noise_slur|norm)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "procedures-j": {
+            "comment": "IDL built-in procedures that begin with J.",
+            "match": "(?i:journal)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-n": {
+            "comment": "IDL built-in procedures that begin with N.",
+            "match": "(?i:ncdf_(?i:attdel|attget|attput|attrename|close|control|diminq|dimrename|varget1|varget|varput|varrename))(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-o": {
+            "comment": "IDL built-in procedures that begin with O.",
+            "match": "(?i:obj_destroy|oplot)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-p": {
+            "comment": "IDL built-in procedures that begin with P.",
+            "match": "(?i:plot|printf|print|ptr_free)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-q": {
+            "comment": "IDL built-in procedures that begin with Q.",
+            "match": "(?i:qhull|qwerty)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-r": {
+            "comment": "IDL built-in procedures that begin with R.",
+            "match": "(?i:rdpix|readf|read_gif|read|return)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-s": {
+            "comment": "IDL built-in procedures that begin with S.",
+            "match": "(?i:save|set_plot|setenv|stop)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-z": {
+            "comment": "IDL built-in procedures that begin with Z.",
+            "match": "(?i:zoom_24|zoom)(?=,|\\s)",
             "name": "support.function.idl"
         }
     }
