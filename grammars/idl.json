@@ -418,7 +418,6 @@
             "match": "(?i:la_(?i:choldc|ludc|svd|tridc|triql|trired))(?=,|\\s)",
             "name": "support.function.idl"
         },
-        
         "procedures-m": {
             "patterns": [
                 {
