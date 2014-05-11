@@ -4,6 +4,7 @@
     "fileTypes": [ "pro" ],
     "patterns": [
         {
+            "comment": "Comments!",
             "begin": "(^[ \\t]+)?(?=;)",
             "beginCaptures": {
                     "1": {"name": "punctuation.whitespace.comment.leading.idl"}
@@ -22,7 +23,7 @@
         },
         {
             "comment": "What the heck does the 'of' reserved word do?",
-            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|on_ioerror|pro|repeat|switch|then|until|while)",
+            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|pro|repeat|switch|then|until|while)",
             "name": "keyword.control.idl"
         },
         {
@@ -46,106 +47,129 @@
             "name": "constant.numeric.idl"
         },
         {
-            "include": "#single-quoted-string"
-        },
-        {
-            "include": "#double-quoted-string"
-        },
-        {
-            "include": "#functions-a"
-        },
-        {
-            "include": "#functions-b"
-        },
-        {
-            "include": "#functions-j"
-        },
-        {
-            "include": "#functions-k"
-        },
-        {
-            "include": "#functions-n"
-        },
-        {
-            "include": "#functions-q"
-        },
-        {
-            "include": "#functions-r"
-        },
-        {
-            "include": "#functions-s"
-        },
-        {
-            "include": "#functions-t"
-        },
-        {
-            "include": "#functions-u"
-        },
-        {
-            "include": "#functions-v"
-        },
-        {
-            "include": "#functions-w"
-        },
-        {
-            "include": "#functions-x"
-        },
-        {
-            "include": "#procedures-a"
-        },
-        {
-            "include": "#procedures-b"
-        },
-        {
-            "include": "#procedures-j"
-        },
-        {
-            "include": "#procedures-n"
-        },
-        {
-            "include": "#procedures-o"
-        },
-        {
-            "include": "#procedures-p"
-        },
-        {
-            "include": "#procedures-q"
-        },
-        {
-            "include": "#procedures-r"
-        },
-        {
-            "include": "#procedures-s"
-        },
-        {
-            "include": "#procedures-t"
-        },
-        {
-            "include": "#procedures-u"
-        },
-        {
-            "include": "#procedures-v"
-        },
-        {
-            "include": "#procedures-w"
-        },
-        {
-            "include": "#procedures-x"
-        },
-        {
-            "include": "#procedures-z"
-        }
-    ],
-    "repository": {
-        "single-quoted-string": {
             "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
             "match": "'[^']*'",
             "name": "string.quoted.single.idl"
         },
-        "double-quoted-string": {
+        {
             "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
             "match": "\"[^\"]*\"",
             "name": "string.quoted.double.idl"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#procedures"
+        }
+    ],
+    "repository": {
+        "functions": {
+            "patterns": [
+                {
+                    "include": "#functions-a"
+                },
+                {
+                    "include": "#functions-b"
+                },
+                {
+                    "include": "#functions-j"
+                },
+                {
+                    "include": "#functions-k"
+                },
+                {
+                    "include": "#functions-m"
+                },
+                {
+                    "include": "#functions-n"
+                },
+                {
+                    "include": "#functions-o"
+                },
+                {
+                    "include": "#functions-p"
+                },
+                {
+                    "include": "#functions-q"
+                },
+                {
+                    "include": "#functions-r"
+                },
+                {
+                    "include": "#functions-s"
+                },
+                {
+                    "include": "#functions-t"
+                },
+                {
+                    "include": "#functions-u"
+                },
+                {
+                    "include": "#functions-v"
+                },
+                {
+                    "include": "#functions-w"
+                },
+                {
+                    "include": "#functions-x"
+                }
+            ]
+        },
+        "procedures": {
+            "patterns": [
+                {
+                    "include": "#procedures-a"
+                },
+                {
+                    "include": "#procedures-b"
+                },
+                {
+                    "include": "#procedures-j"
+                },
+                {
+                    "include": "#procedures-k"
+                },
+                {
+                    "include": "#procedures-m"
+                },
+                {
+                    "include": "#procedures-n"
+                },
+                {
+                    "include": "#procedures-o"
+                },
+                {
+                    "include": "#procedures-p"
+                },
+                {
+                    "include": "#procedures-q"
+                },
+                {
+                    "include": "#procedures-r"
+                },
+                {
+                    "include": "#procedures-s"
+                },
+                {
+                    "include": "#procedures-t"
+                },
+                {
+                    "include": "#procedures-u"
+                },
+                {
+                    "include": "#procedures-v"
+                },
+                {
+                    "include": "#procedures-w"
+                },
+                {
+                    "include": "#procedures-x"
+                },
+                {
+                    "include": "#procedures-z"
+                }
+            ]
         },
         "functions-a": {
             "comment": "IDL built-in functions that begin with A.",
@@ -167,19 +191,125 @@
             "match": "(?i:keyword_set|krig2d|kurtosis|kw_test)(?=\\()",
             "name": "support.function.idl"
         },
+        "functions-m": {
+            "patterns": [
+                {
+                    "include": "#functions-mmm"
+                },
+                {
+                    "include": "#functions-map"
+                },
+                {
+                    "include": "#functions-mesh"
+                },
+                {
+                    "include": "#functions-morph"
+                }
+            ]
+        },
+        "functions-mmm": {
+            "comment": "IDL built-in functions that begin with M.",
+            "match": "(?i:m_correlate|machar|make_array|matrix_multiply|matrix_power|max|md_test|meanabsdev|mean|median|memory|min|min_curve_surf|moment|mpeg_open)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-map": {
+            "comment": "IDL built-in functions that begin with MAP.",
+            "match": "(?i:map_(?i:2points|image|patch|proj_forward|proj_image|proj_init|proj_inverse))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-mesh": {
+            "comment": "IDL built-in functions that begin with MESH.",
+            "match": "(?i:mesh_(?i:clip|decimate|issolid|merge|numtriangles|smooth|surfacearea|validate|volume))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-morph": {
+            "comment": "IDL built-in functions that begin with MORPH.",
+            "match": "(?i:morph_(?i:close|distance|gradient|hitormiss|open|thin|tophat))(?=\\()",
+            "name": "support.function.idl"
+        },
         "functions-n": {
-            "comment": "IDL built-in functions that begin with N.  NCDF routines are not included yet.",
+            "patterns": [
+                {
+                    "include": "#functions-nnn"
+                },
+                {
+                    "include": "#functions-ncdf"
+                }
+            ]
+        },
+        "functions-nnn": {
+            "comment": "IDL built-in functions that begin with N.",
             "match": "(?i:n_elements|n_params|n_tags|newton|noise_hurl|noise_pick|noise_scatter|noise_slur|norm)(?=\\()",
             "name": "support.function.idl"
         },
+        "functions-ncdf": {
+            "comment": "IDL built-in functions that begin with NCDF.",
+            "match": "(?i:ncdf_(?i:attcopy|attinq|attname|create|dimdef|dimid|exists|inquire|open|vardef|varid))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-o": {
+            "patterns": [
+                {
+                    "include": "#functions-ooo"
+                },
+                {
+                    "include": "#functions-obj"
+                }
+            ]
+        },
+        "functions-ooo": {
+            "comment": "IDL built-in functions that begin with O.",
+            "match": "(?i:objarr)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-obj": {
+            "comment": "IDL built-in functions that begin with OBJ.",
+            "match": "(?i:obj_(?i:class|hasmethod|isa|new|valid))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-p": {
+            "comment": "IDL built-in functions that begin with P.",
+            "match": "(?i:p_correlate|parse_url|path_sep|pcomp|pnt_line|polar_surface|poly_2d|poly_area|poly_fit|polyfillv|polyshade|poly|pref_get|prewitt|primes|product|profile|project_vol|ptr_new|ptr_valid|ptrarr)(?=\\()",
+            "name": "support.function.idl"
+        },
         "functions-q": {
+            "patterns": [
+                {
+                    "include": "#functions-qqq"
+                },
+                {
+                    "include": "#functions-query"
+                }
+            ]
+        },
+        "functions-qqq": {
             "comment": "IDL built-in functions that begin with Q.",
-            "match": "(?i:qgrid3|qromb|qromo|qsimp|query_ascii|query_bmp|query_dicom|query_gif|query_image|query_jpeg2000|query_jpeg|query_mrsid|query_pict|query_png|query_ppm|query_srf|query_tiff|query_wav)(?=\\()",
+            "match": "(?i:qgrid3|qromb|qromo|qsimp)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-query": {
+            "comment": "IDL built-in functions that begin with QUERY.",
+            "match": "(?i:query_(?i:ascii|bmp|dicom|gif|image|jpeg2000|jpeg|mrsid|pict|png|ppm|srf|tiff|wav))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-r": {
+            "patterns": [
+                {
+                    "include": "#functions-rrr"
+                },
+                {
+                    "include": "#functions-read"
+                }
+            ]
+        },
+        "functions-rrr": {
             "comment": "IDL built-in functions that begin with R.",
-            "match": "(?i:r_correlate|r_test|radon|randomn|randomu|ranks|read_ascii|read_binary|read_dicom|read_image|read_jpeg2000|read_mrsid|read_png|read_spr|read_sylk|read_tiff|read_wav|read_xwd|real_part|rebin|recall_commands|recon3|reform|region_grow|regress|replicate|reverse|rk4|roberts|rotate|rot|round|routine_info|routine_filepath|rs_test)(?=\\()",
+            "match": "(?i:r_correlate|r_test|radon|randomn|randomu|ranks|real_part|rebin|recall_commands|recon3|reform|region_grow|regress|replicate|reverse|rk4|roberts|rotate|rot|round|routine_info|routine_filepath|rs_test)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-read": {
+            "comment": "IDL built-in functions that begin with READ.",
+            "match": "(?i:read_(?i:ascii|binary|dicom|image|jpeg2000|mrsid|png|spr|sylk|tiff|wav|xwd))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-s": {
@@ -227,6 +357,34 @@
             "match": "(?i:journal)(?=,|\\s)",
             "name": "support.function.idl"
         },
+        "procedures-m": {
+            "patterns": [
+                {
+                    "include": "#procedures-mmm"
+                },
+                {
+                    "include": "#procedures-map"
+                },
+                {
+                    "include": "#procedures-mpeg"
+                }
+            ]
+        },
+        "procedures-mmm": {
+            "comment": "IDL built-in procedures that begin with M.",
+            "match": "(?i:make_dll|make_rt|mesh_obj|message|mk_html_help|modifyct|multi)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-map": {
+            "comment": "IDL built-in procedures that begin with MAP.",
+            "match": "(?i:map_(?i:continents|grid|proj_info|set))(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-mpeg": {
+            "comment": "IDL built-in procedures that begin with MPEG.",
+            "match": "(?i:mpeg_(?i:close|put|save))(?=,|\\s)",
+            "name": "support.function.idl"
+        },
         "procedures-n": {
             "comment": "IDL built-in procedures that begin with N.",
             "match": "(?i:ncdf_(?i:attdel|attget|attput|attrename|close|control|diminq|dimrename|varget1|varget|varput|varrename))(?=,|\\s)",
@@ -234,12 +392,12 @@
         },
         "procedures-o": {
             "comment": "IDL built-in procedures that begin with O.",
-            "match": "(?i:obj_destroy|oplot)(?=,|\\s)",
+            "match": "(?i:obj_destroy|on_error|on_ioerror|online_help|openr|openu|openw|oploterr|oplot)(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-p": {
             "comment": "IDL built-in procedures that begin with P.",
-            "match": "(?i:plot|printf|print|ptr_free)(?=,|\\s)",
+            "match": "(?i:particle_trace|path_cache|plot_3dbox|plot_field|ploterr|plots|plot|point_lun|polar_contour|polyfill|polywarp|popd|powell|pref_commit|pref_migrate|pref_set|printd|printf|print|profiler|profiles|ps_show_fonts|psafm|pseudo|ptr_free|pushd)(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-q": {
@@ -248,8 +406,23 @@
             "name": "support.function.idl"
         },
         "procedures-r": {
+            "patterns": [
+                {
+                    "include": "#procedures-rrr"
+                },
+                {
+                    "include": "#procedures-read"
+                }
+            ]
+        },
+        "procedures-rrr": {
             "comment": "IDL built-in procedures that begin with R.",
-            "match": "(?i:rdpix|readf|read_gif|read_interfile|read_jpeg|read_pict|read_png|read_ppm|read_srf|read_wave|read_x11_bitmap|reads|readu|read|return|reduce_colors|register_cursor|replicate_inplace|resolve_all|resolve_routine|restore|retall|return)(?=,|\\s)",
+            "match": "(?i:rdpix|readf|reads|readu|read|return|reduce_colors|register_cursor|replicate_inplace|resolve_all|resolve_routine|restore|retall|return)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-read": {
+            "comment": "IDL built-in procedures that begin with READ.",
+            "match": "(?i:read_(?:gif|interfile|jpeg|pict|png|ppm|srf|wave|x11_bitmap))(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-s": {
