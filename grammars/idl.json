@@ -79,6 +79,9 @@
                     "include": "#functions-k"
                 },
                 {
+                    "include": "#functions-l"
+                },
+                {
                     "include": "#functions-m"
                 },
                 {
@@ -129,6 +132,9 @@
                 },
                 {
                     "include": "#procedures-k"
+                },
+                {
+                    "include": "#procedures-l"
                 },
                 {
                     "include": "#procedures-m"
@@ -189,6 +195,26 @@
         "functions-k": {
             "comment": "IDL built-in functions that begin with K.",
             "match": "(?i:keyword_set|krig2d|kurtosis|kw_test)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-l": {
+            "patterns": [
+                {
+                    "include": "#functions-lll"
+                },
+                {
+                    "include": "#functions-la"
+                }
+            ]
+        },
+        "functions-lll": {
+            "comment": "IDL built-in functions that begin with L.",
+            "match": "(?i:l64indgen|label_date|label_region|ladfit|laguerre|laplacian|leefilt|legendre|linbcg|lindgen|linfit|ll_arc_distance|lmfit|lmgr|lngamma|lnp_test|locale_get|logical_and|logical_or|logical_true|lon64arr|lonarr|long|long64|lsode|lu_complex|lumprove|lusol)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-la": {
+            "comment": "IDL built-in functions that begin with LA.",
+            "match": "(?i:la_(?i:cholmprove|cholsol|determ|eigenproblem|eigenql|eigenvec|elmhes|gm_linear_model|hqr|invert|least_square_equality|least_squares|linear_equation|lumprove|lusol|trimprove|trisol))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-m": {
@@ -333,8 +359,23 @@
             "name": "support.function.idl"
         },
         "functions-w": {
+            "patterns": [
+                {
+                    "include": "#functions-www"
+                },
+                {
+                    "include": "#functions-widget"
+                }
+            ]
+        },
+        "functions-www": {
             "comment": "IDL built-in functions that begin with W. Wavelet routines are not included yet.",
             "match": "(?i:warp_tri|watershed|where|wtn)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-widget": {
+            "comment": "IDL built-in functions that begin with WIDGET.",
+            "match": "(?i:widget_(?i:activex|base|button|combobox|draw|droplist|event|info|label|list|propertysheet|slider|tab|table|text|tree))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-x": {
@@ -357,6 +398,27 @@
             "match": "(?i:journal)(?=,|\\s)",
             "name": "support.function.idl"
         },
+        "procedures-l": {
+            "patterns": [
+                {
+                    "include": "#procedures-lll"
+                },
+                {
+                    "include": "#procedures-la"
+                }
+            ]
+        },
+        "procedures-lll": {
+            "comment": "IDL built-in procedures that begin with L.",
+            "match": "(?i:linkimage|loadct|ludc)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-la": {
+            "comment": "IDL built-in procedures that begin with LA.",
+            "match": "(?i:la_(?i:choldc|ludc|svd|tridc|triql|trired))(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        
         "procedures-m": {
             "patterns": [
                 {
@@ -446,8 +508,31 @@
             "name": "support.function.idl"
         },
         "procedures-w": {
+            "patterns": [
+                {
+                    "include": "#procedures-www"
+                },
+                {
+                    "include": "#procedures-widget"
+                },
+                {
+                    "include": "#procedures-write"
+                }
+            ]
+        },
+        "procedures-www": {
             "comment": "IDL built-in procedures that begin with W.",
             "match": "(?i:wait|wdelete|wf_draw|window|writeu|wset|wshow)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-widget": {
+            "comment": "IDL built-in procedures that begin with WIDGET.",
+            "match": "(?i:widget_(?i:control|displaycontextmenu|tree_move))(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-write": {
+            "comment": "IDL built-in procedures that begin with WRITE.",
+            "match": "(?i:write_(?i:bmp|gif|image|jpeg2000|jpeg|nrif|pict|png|ppm|spr|srf|tiff|wave|wav))(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-x": {
