@@ -73,6 +73,9 @@
                     "include": "#functions-b"
                 },
                 {
+                    "include": "#functions-c"
+                },
+                {
                     "include": "#functions-j"
                 },
                 {
@@ -128,6 +131,9 @@
                     "include": "#procedures-b"
                 },
                 {
+                    "include": "#procedures-c"
+                },
+                {
                     "include": "#procedures-j"
                 },
                 {
@@ -179,22 +185,50 @@
         },
         "functions-a": {
             "comment": "IDL built-in functions that begin with A.",
-            "match": "(?i:a_correlate|abs|acos|adapt_hist_equal|alog10|alog|amoeba|app_user_dir_query|app_user_dir|arg_present|array_equal|array_indices|ascii_template|asin|assoc|atan)(?=\\()",
+            "match": "\\b(?i:a_correlate|abs|acos|adapt_hist_equal|alog10|alog|amoeba|app_user_dir_query|app_user_dir|arg_present|array_equal|array_indices|ascii_template|asin|assoc|atan)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-b": {
             "comment": "IDL built-in functions that begin with B.",
-            "match": "(?i:beseli|beselj|beselk|besely|beta|bilinear|bin_date|binary_template|bindgen|binomial|bit_ffs|bit_population|blk_con|broyden|butterworth|bytarr|byte|bytscl)(?=\\()",
+            "match": "\\b(?i:beseli|beselj|beselk|besely|beta|bilinear|bin_date|binary_template|bindgen|binomial|bit_ffs|bit_population|blk_con|broyden|butterworth|bytarr|byte|bytscl)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-c": {
+            "patterns": [
+                {
+                    "include": "#functions-ccc"
+                },
+                {
+                    "include": "#functions-cdf"
+                },
+                {
+                    "include": "#functions-cw"
+                }
+            ]
+        },
+        "functions-ccc": {
+            "comment": "IDL built-in functions that begin with C.",
+            "match": "\\b(?i:c_correlate|call_external|call_function|call_method|canny|ceil|chebyshev|check_math|chisqr_cvf|chisqr_pdf|cholsol|cindgen|clust_wts|cluster|cluster_tree|color_quan|color_range_map|colorize_sample|colormap_applicable|colormap_gradient|colormap_rotation|comfit|command_line_args|complex|complexarr|complexround|compute_mesh_normals|cond|congrid|conj|convert_coord|convol|coord2to3|correlate|cos|cosh|cramer|create_cursor|create_struct|crossp|crvlength|ct_luminance|cti_test|curvefit|cv_coord|cvttobm)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-cdf": {
+            "comment": "IDL built-in functions that begin with CDF.",
+            "match": "\\b(?i:cdf_(?i:attcreate|attexists|attnum|create|encode_epoch|epoch_compare|epoch_diff|error|exists|inquire|open|parse_epoch|parse_epoch16|varcreate|varinq|varnum))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-cw": {
+            "comment": "IDL built-in functions that begin with CW.",
+            "match": "\\b(?i:cw_(?i:animate|arcball|bgroup|clr_index|colorsel|defroi|field|filesel|form|fslider|light_editor|orient|palatte_editor|pdmenu|rgbslider|zoom))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-j": {
             "comment": "IDL built-in functions that begin with J.",
-            "match": "(?i:julday)(?=\\()",
+            "match": "\\b(?i:julday)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-k": {
             "comment": "IDL built-in functions that begin with K.",
-            "match": "(?i:keyword_set|krig2d|kurtosis|kw_test)(?=\\()",
+            "match": "\\b(?i:keyword_set|krig2d|kurtosis|kw_test)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-l": {
@@ -209,12 +243,12 @@
         },
         "functions-lll": {
             "comment": "IDL built-in functions that begin with L.",
-            "match": "(?i:l64indgen|label_date|label_region|ladfit|laguerre|laplacian|leefilt|legendre|linbcg|lindgen|linfit|ll_arc_distance|lmfit|lmgr|lngamma|lnp_test|locale_get|logical_and|logical_or|logical_true|lon64arr|lonarr|long|long64|lsode|lu_complex|lumprove|lusol)(?=\\()",
+            "match": "\\b(?i:l64indgen|label_date|label_region|ladfit|laguerre|laplacian|leefilt|legendre|linbcg|lindgen|linfit|ll_arc_distance|lmfit|lmgr|lngamma|lnp_test|locale_get|logical_and|logical_or|logical_true|lon64arr|lonarr|long|long64|lsode|lu_complex|lumprove|lusol)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-la": {
             "comment": "IDL built-in functions that begin with LA.",
-            "match": "(?i:la_(?i:cholmprove|cholsol|determ|eigenproblem|eigenql|eigenvec|elmhes|gm_linear_model|hqr|invert|least_square_equality|least_squares|linear_equation|lumprove|lusol|trimprove|trisol))(?=\\()",
+            "match": "\\b(?i:la_(?i:cholmprove|cholsol|determ|eigenproblem|eigenql|eigenvec|elmhes|gm_linear_model|hqr|invert|least_square_equality|least_squares|linear_equation|lumprove|lusol|trimprove|trisol))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-m": {
@@ -235,22 +269,22 @@
         },
         "functions-mmm": {
             "comment": "IDL built-in functions that begin with M.",
-            "match": "(?i:m_correlate|machar|make_array|matrix_multiply|matrix_power|max|md_test|meanabsdev|mean|median|memory|min|min_curve_surf|moment|mpeg_open)(?=\\()",
+            "match": "\\b(?i:m_correlate|machar|make_array|matrix_multiply|matrix_power|max|md_test|meanabsdev|mean|median|memory|min|min_curve_surf|moment|mpeg_open)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-map": {
             "comment": "IDL built-in functions that begin with MAP.",
-            "match": "(?i:map_(?i:2points|image|patch|proj_forward|proj_image|proj_init|proj_inverse))(?=\\()",
+            "match": "\\b(?i:map_(?i:2points|image|patch|proj_forward|proj_image|proj_init|proj_inverse))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-mesh": {
             "comment": "IDL built-in functions that begin with MESH.",
-            "match": "(?i:mesh_(?i:clip|decimate|issolid|merge|numtriangles|smooth|surfacearea|validate|volume))(?=\\()",
+            "match": "\\b(?i:mesh_(?i:clip|decimate|issolid|merge|numtriangles|smooth|surfacearea|validate|volume))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-morph": {
             "comment": "IDL built-in functions that begin with MORPH.",
-            "match": "(?i:morph_(?i:close|distance|gradient|hitormiss|open|thin|tophat))(?=\\()",
+            "match": "\\b(?i:morph_(?i:close|distance|gradient|hitormiss|open|thin|tophat))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-n": {
@@ -265,12 +299,12 @@
         },
         "functions-nnn": {
             "comment": "IDL built-in functions that begin with N.",
-            "match": "(?i:n_elements|n_params|n_tags|newton|noise_hurl|noise_pick|noise_scatter|noise_slur|norm)(?=\\()",
+            "match": "\\b(?i:n_elements|n_params|n_tags|newton|noise_hurl|noise_pick|noise_scatter|noise_slur|norm)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-ncdf": {
             "comment": "IDL built-in functions that begin with NCDF.",
-            "match": "(?i:ncdf_(?i:attcopy|attinq|attname|create|dimdef|dimid|exists|inquire|open|vardef|varid))(?=\\()",
+            "match": "\\b(?i:ncdf_(?i:attcopy|attinq|attname|create|dimdef|dimid|exists|inquire|open|vardef|varid))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-o": {
@@ -285,17 +319,17 @@
         },
         "functions-ooo": {
             "comment": "IDL built-in functions that begin with O.",
-            "match": "(?i:objarr)(?=\\()",
+            "match": "\\b(?i:objarr)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-obj": {
             "comment": "IDL built-in functions that begin with OBJ.",
-            "match": "(?i:obj_(?i:class|hasmethod|isa|new|valid))(?=\\()",
+            "match": "\\b(?i:obj_(?i:class|hasmethod|isa|new|valid))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-p": {
             "comment": "IDL built-in functions that begin with P.",
-            "match": "(?i:p_correlate|parse_url|path_sep|pcomp|pnt_line|polar_surface|poly_2d|poly_area|poly_fit|polyfillv|polyshade|poly|pref_get|prewitt|primes|product|profile|project_vol|ptr_new|ptr_valid|ptrarr)(?=\\()",
+            "match": "\\b(?i:p_correlate|parse_url|path_sep|pcomp|pnt_line|polar_surface|poly_2d|poly_area|poly_fit|polyfillv|polyshade|poly|pref_get|prewitt|primes|product|profile|project_vol|ptr_new|ptr_valid|ptrarr)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-q": {
@@ -310,12 +344,12 @@
         },
         "functions-qqq": {
             "comment": "IDL built-in functions that begin with Q.",
-            "match": "(?i:qgrid3|qromb|qromo|qsimp)(?=\\()",
+            "match": "\\b(?i:qgrid3|qromb|qromo|qsimp)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-query": {
             "comment": "IDL built-in functions that begin with QUERY.",
-            "match": "(?i:query_(?i:ascii|bmp|dicom|gif|image|jpeg2000|jpeg|mrsid|pict|png|ppm|srf|tiff|wav))(?=\\()",
+            "match": "\\b(?i:query_(?i:ascii|bmp|dicom|gif|image|jpeg2000|jpeg|mrsid|pict|png|ppm|srf|tiff|wav))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-r": {
@@ -330,32 +364,32 @@
         },
         "functions-rrr": {
             "comment": "IDL built-in functions that begin with R.",
-            "match": "(?i:r_correlate|r_test|radon|randomn|randomu|ranks|real_part|rebin|recall_commands|recon3|reform|region_grow|regress|replicate|reverse|rk4|roberts|rotate|rot|round|routine_info|routine_filepath|rs_test)(?=\\()",
+            "match": "\\b(?i:r_correlate|r_test|radon|randomn|randomu|ranks|real_part|rebin|recall_commands|recon3|reform|region_grow|regress|replicate|reverse|rk4|roberts|rotate|rot|round|routine_info|routine_filepath|rs_test)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-read": {
             "comment": "IDL built-in functions that begin with READ.",
-            "match": "(?i:read_(?i:ascii|binary|dicom|image|jpeg2000|mrsid|png|spr|sylk|tiff|wav|xwd))(?=\\()",
+            "match": "\\b(?i:read_(?i:ascii|binary|dicom|image|jpeg2000|mrsid|png|spr|sylk|tiff|wav|xwd))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-s": {
             "comment": "IDL built-in functions that begin with S.",
-            "match": "(?i:s_test|savgol|scope_level|scope_traceback|scope_varfetch|scope_varname|search2d|search3d|sem_create|sem_lock|sfit|shift_diff|shift|shmdebug|shmvar|simplex|sindgen|sinh|sin|size|skewness|smooth|sobel|sort|sph_scat|spher_harm|spl_init|spl_interp|spline|sprsab|sprsax|sprsin|sprstp|sqrt|standardize|stddev|strarr|strcmp|strcompress|stregex|string|strjoin|strlen|strlowcase|strmatch|strmessage|strmid|strpos|strsplit|strtrim|strupcase|svdfit|svsol|swap_endian|systime)(?=\\()",
+            "match": "\\b(?i:s_test|savgol|scope_level|scope_traceback|scope_varfetch|scope_varname|search2d|search3d|sem_create|sem_lock|sfit|shift_diff|shift|shmdebug|shmvar|simplex|sindgen|sinh|sin|size|skewness|smooth|sobel|sort|sph_scat|spher_harm|spl_init|spl_interp|spline|sprsab|sprsax|sprsin|sprstp|sqrt|standardize|stddev|strarr|strcmp|strcompress|stregex|string|strjoin|strlen|strlowcase|strmatch|strmessage|strmid|strpos|strsplit|strtrim|strupcase|svdfit|svsol|swap_endian|systime)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-t": {
             "comment": "IDL built-in functions that begin with T.",
-            "match": "(?i:t_cvf|t_pdf|tag_names|tanh|tan|temporary|tetra_clip|tetra_surface|tetra_volume|thin|timegen|tm_test|total|trace|transpose|tri_surf|trigrid|trisol|ts_coef|ts_diff|ts_fcast|ts_smooth|tvrd)(?=\\()",
+            "match": "\\b(?i:t_cvf|t_pdf|tag_names|tanh|tan|temporary|tetra_clip|tetra_surface|tetra_volume|thin|timegen|tm_test|total|trace|transpose|tri_surf|trigrid|trisol|ts_coef|ts_diff|ts_fcast|ts_smooth|tvrd)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-u": {
             "comment": "IDL built-in functions that begin with U.",
-            "match": "(?i:uindgen|uintarr|uint|ul64indgen|ulindgen|ulon64arr|ulonarr|ulong64|ulong|uniq|unsharp_mask)(?=\\()",
+            "match": "\\b(?i:uindgen|uintarr|uint|ul64indgen|ulindgen|ulon64arr|ulonarr|ulong64|ulong|uniq|unsharp_mask)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-v": {
             "comment": "IDL built-in functions that begin with V.",
-            "match": "(?i:value_locate|variance|vert_t3d|voigt|voxel_proj)(?=\\()",
+            "match": "\\b(?i:value_locate|variance|vert_t3d|voigt|voxel_proj)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-w": {
@@ -370,32 +404,60 @@
         },
         "functions-www": {
             "comment": "IDL built-in functions that begin with W. Wavelet routines are not included yet.",
-            "match": "(?i:warp_tri|watershed|where|wtn)(?=\\()",
+            "match": "\\b(?i:warp_tri|watershed|where|wtn)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-widget": {
             "comment": "IDL built-in functions that begin with WIDGET.",
-            "match": "(?i:widget_(?i:activex|base|button|combobox|draw|droplist|event|info|label|list|propertysheet|slider|tab|table|text|tree))(?=\\()",
+            "match": "\\b(?i:widget_(?i:activex|base|button|combobox|draw|droplist|event|info|label|list|propertysheet|slider|tab|table|text|tree))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-x": {
             "comment": "IDL built-in functions that begin with X.",
-            "match": "(?i:xfont|xregistered|xsq_test)(?=\\()",
+            "match": "\\b(?i:xfont|xregistered|xsq_test)(?=\\()",
             "name": "support.function.idl"
         },
         "procedures-a": {
             "comment": "IDL built-in procedures that begin with A.",
-            "match": "(?i:annotate|arrow|axis)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:annotate|arrow|axis)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-b": {
             "comment": "IDL built-in procedures that begin with B.",
-            "match": "(?i:bar_plot|blas_axpy|box_cursor|breakpoint|byteorder)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:bar_plot|blas_axpy|box_cursor|breakpoint|byteorder)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-c": {
+            "patterns": [
+                {
+                    "include": "#procedures-ccc"
+                },
+                {
+                    "include": "#procedures-cdf"
+                },
+                {
+                    "include": "#procedures-cw"
+                }
+            ]
+        },
+        "procedures-ccc": {
+            "comment": "IDL built-in procedures that begin with C.",
+            "match": "\\b(?<!/)(?i:caldat|calendar|call_procedure|catch|cd|choldc|cir_3pnt|close|cymk_convert|color_convert|color_exchange|constrained_min|contour|copy_lun|cpu|create_view|cursor)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-cdf": {
+            "comment": "IDL built-in procedures that begin with CDF.",
+            "match": "\\b(?<!/)(?i:cdf_(?i:attdelete|attget|attinq|attput|attrename|close|compression|control|delete|doc|epoch16|epoch|lib_info|set_cdf27_backward_compatible|vardelete|varget1|varget|varput|varrename))(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-cw": {
+            "comment": "IDL built-in procedures that begin with CW.",
+            "match": "\\b(?<!/)(?i:cw_(?i:animate_getp|animate_load|animate_run|light_editor_get|light_editor_set|palette_editor_get|palette_editor_set|tmpl))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-j": {
             "comment": "IDL built-in procedures that begin with J.",
-            "match": "(?i:journal)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:journal)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-l": {
@@ -410,12 +472,12 @@
         },
         "procedures-lll": {
             "comment": "IDL built-in procedures that begin with L.",
-            "match": "(?i:linkimage|loadct|ludc)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:linkimage|loadct|ludc)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-la": {
             "comment": "IDL built-in procedures that begin with LA.",
-            "match": "(?i:la_(?i:choldc|ludc|svd|tridc|triql|trired))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:la_(?i:choldc|ludc|svd|tridc|triql|trired))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-m": {
@@ -433,37 +495,37 @@
         },
         "procedures-mmm": {
             "comment": "IDL built-in procedures that begin with M.",
-            "match": "(?i:make_dll|make_rt|mesh_obj|message|mk_html_help|modifyct|multi)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:make_dll|make_rt|mesh_obj|message|mk_html_help|modifyct|multi)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-map": {
             "comment": "IDL built-in procedures that begin with MAP.",
-            "match": "(?i:map_(?i:continents|grid|proj_info|set))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:map_(?i:continents|grid|proj_info|set))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-mpeg": {
             "comment": "IDL built-in procedures that begin with MPEG.",
-            "match": "(?i:mpeg_(?i:close|put|save))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:mpeg_(?i:close|put|save))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-n": {
             "comment": "IDL built-in procedures that begin with N.",
-            "match": "(?i:ncdf_(?i:attdel|attget|attput|attrename|close|control|diminq|dimrename|varget1|varget|varput|varrename))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:ncdf_(?i:attdel|attget|attput|attrename|close|control|diminq|dimrename|varget1|varget|varput|varrename))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-o": {
             "comment": "IDL built-in procedures that begin with O.",
-            "match": "(?i:obj_destroy|on_error|on_ioerror|online_help|openr|openu|openw|oploterr|oplot)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:obj_destroy|on_error|on_ioerror|online_help|openr|openu|openw|oploterr|oplot)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-p": {
             "comment": "IDL built-in procedures that begin with P.",
-            "match": "(?i:particle_trace|path_cache|plot_3dbox|plot_field|ploterr|plots|plot|point_lun|polar_contour|polyfill|polywarp|popd|powell|pref_commit|pref_migrate|pref_set|printd|printf|print|profiler|profiles|ps_show_fonts|psafm|pseudo|ptr_free|pushd)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:particle_trace|path_cache|plot_3dbox|plot_field|ploterr|plots|plot|point_lun|polar_contour|polyfill|polywarp|popd|powell|pref_commit|pref_migrate|pref_set|printd|printf|print|profiler|profiles|ps_show_fonts|psafm|pseudo|ptr_free|pushd)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-q": {
             "comment": "IDL built-in procedures that begin with Q.",
-            "match": "(?i:qhull|qwerty)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:qhull|qwerty)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-r": {
@@ -478,32 +540,32 @@
         },
         "procedures-rrr": {
             "comment": "IDL built-in procedures that begin with R.",
-            "match": "(?i:rdpix|readf|reads|readu|read|return|reduce_colors|register_cursor|replicate_inplace|resolve_all|resolve_routine|restore|retall|return)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:rdpix|readf|reads|readu|read|return|reduce_colors|register_cursor|replicate_inplace|resolve_all|resolve_routine|restore|retall|return)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-read": {
             "comment": "IDL built-in procedures that begin with READ.",
-            "match": "(?i:read_(?:gif|interfile|jpeg|pict|png|ppm|srf|wave|x11_bitmap))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:read_(?:gif|interfile|jpeg|pict|png|ppm|srf|wave|x11_bitmap))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-s": {
             "comment": "IDL built-in procedures that begin with S.",
-            "match": "(?i:save|scale3d|scale3|sem_delete|sem_release|set_plot|set_shading|setenv|shade_surf_irr|shade_surf|shade_volume|shmmap|shmunmap|show3|showfont|skip_lun|slicer3|slide_image|socket|spawn|sph_4pnt|spline_p|stop|streamline|stretch|strput|struct_assign|struct_hide|surface|surfr|svdc|swap_endian_inplace)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:save|scale3d|scale3|sem_delete|sem_release|set_plot|set_shading|setenv|shade_surf_irr|shade_surf|shade_volume|shmmap|shmunmap|show3|showfont|skip_lun|slicer3|slide_image|socket|spawn|sph_4pnt|spline_p|stop|streamline|stretch|strput|struct_assign|struct_hide|surface|surfr|svdc|swap_endian_inplace)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-t": {
             "comment": "IDL built-in procedures that begin with T.",
-            "match": "(?i:t3d|tek_color|threed|time_test2|triangulate|triql|trired|truncate_lun|tvcrs|tvlct|tvscl|tv)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:t3d|tek_color|threed|time_test2|triangulate|triql|trired|truncate_lun|tvcrs|tvlct|tvscl|tv)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-u": {
             "comment": "IDL built-in procedures that begin with U.",
-            "match": "(?i:usersym)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:usersym)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-v": {
             "comment": "IDL built-in procedures that begin with V.",
-            "match": "(?i:vector_field|velovect|vel|voronoi)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:vector_field|velovect|vel|voronoi)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-w": {
@@ -521,27 +583,27 @@
         },
         "procedures-www": {
             "comment": "IDL built-in procedures that begin with W.",
-            "match": "(?i:wait|wdelete|wf_draw|window|writeu|wset|wshow)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:wait|wdelete|wf_draw|window|writeu|wset|wshow)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-widget": {
             "comment": "IDL built-in procedures that begin with WIDGET.",
-            "match": "(?i:widget_(?i:control|displaycontextmenu|tree_move))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:widget_(?i:control|displaycontextmenu|tree_move))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-write": {
             "comment": "IDL built-in procedures that begin with WRITE.",
-            "match": "(?i:write_(?i:bmp|gif|image|jpeg2000|jpeg|nrif|pict|png|ppm|spr|srf|tiff|wave|wav))(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:write_(?i:bmp|gif|image|jpeg2000|jpeg|nrif|pict|png|ppm|spr|srf|tiff|wave|wav))(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-x": {
             "comment": "IDL built-in procedures that begin with X.",
-            "match": "(?i:xbm_edit|xdisplayfile|xdxf|xinteranimate|xloadct|xmanager|xmng_tmpl|xmtool|xobjview_rotate|xobjview_write_image|xobjview|xpalette|xpcolor|xplot3d|xroi|xsurface|xvaredit|xvolume_rotate|xvolume_write_image|xvolume|xyouts)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:xbm_edit|xdisplayfile|xdxf|xinteranimate|xloadct|xmanager|xmng_tmpl|xmtool|xobjview_rotate|xobjview_write_image|xobjview|xpalette|xpcolor|xplot3d|xroi|xsurface|xvaredit|xvolume_rotate|xvolume_write_image|xvolume|xyouts)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-z": {
             "comment": "IDL built-in procedures that begin with Z.",
-            "match": "(?i:zoom_24|zoom)(?=,|\\s)",
+            "match": "\\b(?<!/)(?i:zoom_24|zoom)(?=,|\\s*$)",
             "name": "support.function.idl"
         }
     }
