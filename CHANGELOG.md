@@ -1,5 +1,10 @@
 # Changes
 
+## 0.0.6 - More Functions and Procedures
+
+* Add more functions and procedures.
+* Identify logical operators: `&&`, `||`, `~`.
+
 ## 0.0.5 - Keywords
 
 * Identify IDL reserved words & some of the operators.

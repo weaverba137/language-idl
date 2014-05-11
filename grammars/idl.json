@@ -31,6 +31,11 @@
             "name": "keyword.operator.idl"
         },
         {
+            "comment": "Logical operators",
+            "match": "(?:~|&&|\\|\\|)",
+            "name": "keyword.operator.idl"
+        },
+        {
             "comment": "The system variables.  Some are read-only, some are not & they can be created on the fly.",
             "match": "![a-zA-Z][a-zA-Z0-9_.]+\\b",
             "name": "constant.language.idl"
@@ -47,6 +52,12 @@
             "include": "#double-quoted-string"
         },
         {
+            "include": "#functions-a"
+        },
+        {
+            "include": "#functions-b"
+        },
+        {
             "include": "#functions-j"
         },
         {
@@ -54,6 +65,36 @@
         },
         {
             "include": "#functions-n"
+        },
+        {
+            "include": "#functions-q"
+        },
+        {
+            "include": "#functions-r"
+        },
+        {
+            "include": "#functions-s"
+        },
+        {
+            "include": "#functions-t"
+        },
+        {
+            "include": "#functions-u"
+        },
+        {
+            "include": "#functions-v"
+        },
+        {
+            "include": "#functions-w"
+        },
+        {
+            "include": "#functions-x"
+        },
+        {
+            "include": "#procedures-a"
+        },
+        {
+            "include": "#procedures-b"
         },
         {
             "include": "#procedures-j"
@@ -77,6 +118,21 @@
             "include": "#procedures-s"
         },
         {
+            "include": "#procedures-t"
+        },
+        {
+            "include": "#procedures-u"
+        },
+        {
+            "include": "#procedures-v"
+        },
+        {
+            "include": "#procedures-w"
+        },
+        {
+            "include": "#procedures-x"
+        },
+        {
             "include": "#procedures-z"
         }
     ],
@@ -91,6 +147,16 @@
             "match": "\"[^\"]*\"",
             "name": "string.quoted.double.idl"
         },
+        "functions-a": {
+            "comment": "IDL built-in functions that begin with A.",
+            "match": "(?i:a_correlate|abs|acos|adapt_hist_equal|alog10|alog|amoeba|app_user_dir_query|app_user_dir|arg_present|array_equal|array_indices|ascii_template|asin|assoc|atan)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-b": {
+            "comment": "IDL built-in functions that begin with B.",
+            "match": "(?i:beseli|beselj|beselk|besely|beta|bilinear|bin_date|binary_template|bindgen|binomial|bit_ffs|bit_population|blk_con|broyden|butterworth|bytarr|byte|bytscl)(?=\\()",
+            "name": "support.function.idl"
+        },
         "functions-j": {
             "comment": "IDL built-in functions that begin with J.",
             "match": "(?i:julday)(?=\\()",
@@ -104,6 +170,56 @@
         "functions-n": {
             "comment": "IDL built-in functions that begin with N.  NCDF routines are not included yet.",
             "match": "(?i:n_elements|n_params|n_tags|newton|noise_hurl|noise_pick|noise_scatter|noise_slur|norm)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-q": {
+            "comment": "IDL built-in functions that begin with Q.",
+            "match": "(?i:qgrid3|qromb|qromo|qsimp|query_ascii|query_bmp|query_dicom|query_gif|query_image|query_jpeg2000|query_jpeg|query_mrsid|query_pict|query_png|query_ppm|query_srf|query_tiff|query_wav)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-r": {
+            "comment": "IDL built-in functions that begin with R.",
+            "match": "(?i:r_correlate|r_test|radon|randomn|randomu|ranks|read_ascii|read_binary|read_dicom|read_image|read_jpeg2000|read_mrsid|read_png|read_spr|read_sylk|read_tiff|read_wav|read_xwd|real_part|rebin|recall_commands|recon3|reform|region_grow|regress|replicate|reverse|rk4|roberts|rotate|rot|round|routine_info|routine_filepath|rs_test)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-s": {
+            "comment": "IDL built-in functions that begin with S.",
+            "match": "(?i:s_test|savgol|scope_level|scope_traceback|scope_varfetch|scope_varname|search2d|search3d|sem_create|sem_lock|sfit|shift_diff|shift|shmdebug|shmvar|simplex|sindgen|sinh|sin|size|skewness|smooth|sobel|sort|sph_scat|spher_harm|spl_init|spl_interp|spline|sprsab|sprsax|sprsin|sprstp|sqrt|standardize|stddev|strarr|strcmp|strcompress|stregex|string|strjoin|strlen|strlowcase|strmatch|strmessage|strmid|strpos|strsplit|strtrim|strupcase|svdfit|svsol|swap_endian|systime)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-t": {
+            "comment": "IDL built-in functions that begin with T.",
+            "match": "(?i:t_cvf|t_pdf|tag_names|tanh|tan|temporary|tetra_clip|tetra_surface|tetra_volume|thin|timegen|tm_test|total|trace|transpose|tri_surf|trigrid|trisol|ts_coef|ts_diff|ts_fcast|ts_smooth|tvrd)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-u": {
+            "comment": "IDL built-in functions that begin with U.",
+            "match": "(?i:uindgen|uintarr|uint|ul64indgen|ulindgen|ulon64arr|ulonarr|ulong64|ulong|uniq|unsharp_mask)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-v": {
+            "comment": "IDL built-in functions that begin with V.",
+            "match": "(?i:value_locate|variance|vert_t3d|voigt|voxel_proj)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-w": {
+            "comment": "IDL built-in functions that begin with W. Wavelet routines are not included yet.",
+            "match": "(?i:warp_tri|watershed|where|wtn)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-x": {
+            "comment": "IDL built-in functions that begin with X.",
+            "match": "(?i:xfont|xregistered|xsq_test)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "procedures-a": {
+            "comment": "IDL built-in procedures that begin with A.",
+            "match": "(?i:annotate|arrow|axis)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-b": {
+            "comment": "IDL built-in procedures that begin with B.",
+            "match": "(?i:bar_plot|blas_axpy|box_cursor|breakpoint|byteorder)(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-j": {
@@ -133,12 +249,37 @@
         },
         "procedures-r": {
             "comment": "IDL built-in procedures that begin with R.",
-            "match": "(?i:rdpix|readf|read_gif|read|return)(?=,|\\s)",
+            "match": "(?i:rdpix|readf|read_gif|read_interfile|read_jpeg|read_pict|read_png|read_ppm|read_srf|read_wave|read_x11_bitmap|reads|readu|read|return|reduce_colors|register_cursor|replicate_inplace|resolve_all|resolve_routine|restore|retall|return)(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-s": {
             "comment": "IDL built-in procedures that begin with S.",
-            "match": "(?i:save|set_plot|setenv|stop)(?=,|\\s)",
+            "match": "(?i:save|scale3d|scale3|sem_delete|sem_release|set_plot|set_shading|setenv|shade_surf_irr|shade_surf|shade_volume|shmmap|shmunmap|show3|showfont|skip_lun|slicer3|slide_image|socket|spawn|sph_4pnt|spline_p|stop|streamline|stretch|strput|struct_assign|struct_hide|surface|surfr|svdc|swap_endian_inplace)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-t": {
+            "comment": "IDL built-in procedures that begin with T.",
+            "match": "(?i:t3d|tek_color|threed|time_test2|triangulate|triql|trired|truncate_lun|tvcrs|tvlct|tvscl|tv)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-u": {
+            "comment": "IDL built-in procedures that begin with U.",
+            "match": "(?i:usersym)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-v": {
+            "comment": "IDL built-in procedures that begin with V.",
+            "match": "(?i:vector_field|velovect|vel|voronoi)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-w": {
+            "comment": "IDL built-in procedures that begin with W.",
+            "match": "(?i:wait|wdelete|wf_draw|window|writeu|wset|wshow)(?=,|\\s)",
+            "name": "support.function.idl"
+        },
+        "procedures-x": {
+            "comment": "IDL built-in procedures that begin with X.",
+            "match": "(?i:xbm_edit|xdisplayfile|xdxf|xinteranimate|xloadct|xmanager|xmng_tmpl|xmtool|xobjview_rotate|xobjview_write_image|xobjview|xpalette|xpcolor|xplot3d|xroi|xsurface|xvaredit|xvolume_rotate|xvolume_write_image|xvolume|xyouts)(?=,|\\s)",
             "name": "support.function.idl"
         },
         "procedures-z": {
