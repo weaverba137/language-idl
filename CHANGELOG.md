@@ -4,6 +4,8 @@
 
 * Add more functions and procedures.
 * More carefully match name boundaries.
+* Update README.
+* Add label highlighting.
 
 ## 0.0.6 - More Functions and Procedures
 
