@@ -76,6 +76,12 @@
                     "include": "#functions-c"
                 },
                 {
+                    "include": "#functions-e"
+                },
+                {
+                    "include": "#functions-g"
+                },
+                {
                     "include": "#functions-j"
                 },
                 {
@@ -132,6 +138,12 @@
                 },
                 {
                     "include": "#procedures-c"
+                },
+                {
+                    "include": "#procedures-e"
+                },
+                {
+                    "include": "#procedures-g"
                 },
                 {
                     "include": "#procedures-j"
@@ -219,6 +231,16 @@
         "functions-cw": {
             "comment": "IDL built-in functions that begin with CW.",
             "match": "\\b(?i:cw_(?i:animate|arcball|bgroup|clr_index|colorsel|defroi|field|filesel|form|fslider|light_editor|orient|palatte_editor|pdmenu|rgbslider|zoom))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-e": {
+            "comment": "IDL built-in functions that begin with E.",
+            "match": "\\b(?i:edge_dog|eigenql|eigenvec|elmhes|emboss|eof|erf|erfc|erfcx|erode|execute|exp|expand_path|expint|extrac|extract_slice)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-g": {
+            "comment": "IDL built-in functions that begin with G.",
+            "match": "\\b(?i:gamma|gauss_cvf|gauss_pdf|gauss2dfit|gaussfit|gaussint|get_drive_list|get_kbrd|get_login_info|get_screen_size|getenv|grid_tps|grid3|griddata|gs_iter)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-j": {
@@ -453,6 +475,16 @@
         "procedures-cw": {
             "comment": "IDL built-in procedures that begin with CW.",
             "match": "\\b(?<!/)(?i:cw_(?i:animate_getp|animate_load|animate_run|light_editor_get|light_editor_set|palette_editor_get|palette_editor_set|tmpl))(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-e": {
+            "comment": "IDL built-in procedures that begin with E.",
+            "match": "\\b(?<!/)(?i:efont|empty|enable_sysrtn|erase|errplot|exit|expand)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-g": {
+            "comment": "IDL built-in procedures that begin with G.",
+            "match": "\\b(?<!/)(?i:gamma_ct|get_lun|grid_input)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-j": {
