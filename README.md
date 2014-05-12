@@ -24,11 +24,11 @@ Currently this package supports highlighting for
 * Built-in procedures and functions.
   * CDF and NetCDF functions are included.
   * Other scientific data formats still to be added.
+* Basic automatic indentation.
 
 ## Future Development
 
 * Scientific data format built-ins (`HDF`, `H5`, `EOS`).
-* Automatic indentation.
 
 ## Disclaimers
 

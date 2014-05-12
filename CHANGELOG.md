@@ -1,5 +1,9 @@
 # Changes
 
+## 0.0.8 - Indentation
+
+* Add some basic support for auto-indent.
+
 ## 0.0.7 - More Functions and Procedures
 
 * Add more functions and procedures.

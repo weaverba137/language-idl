@@ -1,3 +1,5 @@
 '.source.idl':
   'editor':
     'commentStart': '; '
+    'increaseIndentPattern': '^\\s*(?i:case.+of|endif.+begin|for.+begin|function|if.+begin|pro|repeat.+begin|switch.+of|while.+begin)\\b'
+    'decreaseIndentPattern': '^\\s*(?i:endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end)\\b'
