@@ -1,5 +1,10 @@
 # Changes
 
+## 0.0.7 - More Functions and Procedures
+
+* Add more functions and procedures.
+* More carefully match name boundaries.
+
 ## 0.0.6 - More Functions and Procedures
 
 * Add more functions and procedures.

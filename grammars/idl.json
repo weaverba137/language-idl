@@ -22,8 +22,8 @@
             ]
         },
         {
-            "comment": "What the heck does the 'of' reserved word do?",
-            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|pro|repeat|switch|then|until|while)",
+            "comment": "Some reserved words are actually procedures, or at least behave like procedures.  These words here are the 'pure' language statements.",
+            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|pro|repeat|switch|then|until|while)\\b",
             "name": "keyword.control.idl"
         },
         {
@@ -76,10 +76,22 @@
                     "include": "#functions-c"
                 },
                 {
+                    "include": "#functions-d"
+                },
+                {
                     "include": "#functions-e"
                 },
                 {
+                    "include": "#functions-f"
+                },
+                {
                     "include": "#functions-g"
+                },
+                {
+                    "include": "#functions-h"
+                },
+                {
+                    "include": "#functions-i"
                 },
                 {
                     "include": "#functions-j"
@@ -140,10 +152,22 @@
                     "include": "#procedures-c"
                 },
                 {
+                    "include": "#procedures-d"
+                },
+                {
                     "include": "#procedures-e"
                 },
                 {
+                    "include": "#procedures-f"
+                },
+                {
                     "include": "#procedures-g"
+                },
+                {
+                    "include": "#procedures-h"
+                },
+                {
+                    "include": "#procedures-i"
                 },
                 {
                     "include": "#procedures-j"
@@ -231,6 +255,26 @@
         "functions-cw": {
             "comment": "IDL built-in functions that begin with CW.",
             "match": "\\b(?i:cw_(?i:animate|arcball|bgroup|clr_index|colorsel|defroi|field|filesel|form|fslider|light_editor|orient|palatte_editor|pdmenu|rgbslider|zoom))(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-d": {
+            "patterns": [
+                {
+                    "include": "#functions-ddd"
+                },
+                {
+                    "include": "#functions-dialog"
+                }
+            ]
+        },
+        "functions-ddd": {
+            "comment": "IDL built-in functions that begin with D.",
+            "match": "\\b(?i:dblarr|dcindgen|dcomplex|dcomplexarr|defroi|deriv|derivsig|determ|diag_matrix|digital_filter|dilate|dindgen|dist|distance_measure|double)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-dialog": {
+            "comment": "IDL built-in functions that begin with DIALOG.",
+            "match": "\\b(?i:dialog_(?i:message|pickfile|printersetup|printjob|read_image|write_image))(?=\\()",
             "name": "support.function.idl"
         },
         "functions-e": {
@@ -475,6 +519,11 @@
         "procedures-cw": {
             "comment": "IDL built-in procedures that begin with CW.",
             "match": "\\b(?<!/)(?i:cw_(?i:animate_getp|animate_load|animate_run|light_editor_get|light_editor_set|palette_editor_get|palette_editor_set|tmpl))(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-d": {
+            "comment": "IDL built-in procedures that begin with D.",
+            "match": "\\b(?<!/)(?i:define_key|define_msgblk|define_msgblk_from_file|defsysv|delvar|dendro_plot|dendrogram|device|dfpmin|dissolve|dlm_load|dlm_register|doc_library|draw_roi)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-e": {
