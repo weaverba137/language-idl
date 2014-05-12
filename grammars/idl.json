@@ -173,9 +173,6 @@
                     "include": "#procedures-j"
                 },
                 {
-                    "include": "#procedures-k"
-                },
-                {
                     "include": "#procedures-l"
                 },
                 {
@@ -282,9 +279,39 @@
             "match": "\\b(?i:edge_dog|eigenql|eigenvec|elmhes|emboss|eof|erf|erfc|erfcx|erode|execute|exp|expand_path|expint|extrac|extract_slice)(?=\\()",
             "name": "support.function.idl"
         },
+        "functions-f": {
+            "patterns": [
+                {
+                    "include": "#functions-fff"
+                },
+                {
+                    "include": "#functions-file"
+                }
+            ]
+        },
+        "functions-fff": {
+            "comment": "IDL built-in functions that begin with F.",
+            "match": "\\b(?i:f_cvf|f_pdf|factorial|fft|filepath|findgen|finite|fix|float|floor|fltarr|format_axis_values|fstat|fulstr|fv_test|fx_root|fz_roots)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-file": {
+            "comment": "IDL built-in functions that begin with FILE.",
+            "match": "\\b(?i:file_(?i:basename|dirname|expand_path|info|lines|poll_input|readlink|same|search|test|which))(?=\\()",
+            "name": "support.function.idl"
+        },
         "functions-g": {
             "comment": "IDL built-in functions that begin with G.",
             "match": "\\b(?i:gamma|gauss_cvf|gauss_pdf|gauss2dfit|gaussfit|gaussint|get_drive_list|get_kbrd|get_login_info|get_screen_size|getenv|grid_tps|grid3|griddata|gs_iter)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-h": {
+            "comment": "IDL built-in functions that begin with H.",
+            "match": "\\b(?i:h5_browser|hanning|hdf_browser|hdf_read|heap_save|hilbert|hist_2d|hist_equal|histogram|hough|hqr)(?=\\()",
+            "name": "support.function.idl"
+        },
+        "functions-i": {
+            "comment": "IDL built-in functions that begin with I.",
+            "match": "\\b(?i:ibeta|identity|idl_validname|idlitsys_createtool|igamma|imaginary|indgen|int_2d|int_3d|int_tabulated|intarr|interpol|interpolate|invert|ioctl|ir_filter|ishft|itgetcurrent)(?=\\()",
             "name": "support.function.idl"
         },
         "functions-j": {
@@ -531,9 +558,39 @@
             "match": "\\b(?<!/)(?i:efont|empty|enable_sysrtn|erase|errplot|exit|expand)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
+        "procedures-f": {
+            "patterns": [
+                {
+                    "include": "#procedures-fff"
+                },
+                {
+                    "include": "#procedures-file"
+                }
+            ]
+        },
+        "procedures-fff": {
+            "comment": "IDL built-in procedures that begin with F.",
+            "match": "\\b(?<!/)(?i:flick|flow3|flush|free_lun|funct)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-file": {
+            "comment": "IDL built-in procedures that begin with FILE.",
+            "match": "\\b(?<!/)(?i:file_(?i:chmod|copy|delete|link|mkdir|move))(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
         "procedures-g": {
             "comment": "IDL built-in procedures that begin with G.",
             "match": "\\b(?<!/)(?i:gamma_ct|get_lun|grid_input)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-h": {
+            "comment": "IDL built-in procedures that begin with H.",
+            "match": "\\b(?<!/)(?i:h_eq_ct|h_eq_int|heap_free|heap_gc|heap_nosave|help|hls|hsv)(?=,|\\s*$)",
+            "name": "support.function.idl"
+        },
+        "procedures-i": {
+            "comment": "IDL built-in procedures that begin with I.",
+            "match": "\\b(?<!/)(?i:icontour|idlexbr_assistant|iimage|image_cont|image_statistics|imap|interval_volume|iplot|isocontour|isosurface|isurface|itcurrent|itdelete|itregister|itreset|itresolve|ivector|ivolume)(?=,|\\s*$)",
             "name": "support.function.idl"
         },
         "procedures-j": {
