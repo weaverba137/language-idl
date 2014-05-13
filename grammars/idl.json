@@ -22,9 +22,9 @@
             ]
         },
         {
-            "comment": "Labels, as in GOTO, fail.",
+            "comment": "Labels, as in the destination of GOTO, fail.",
             "match": "^\\s*\\S+(?=:)",
-            "name": "keyword.other.idl"
+            "name": "entity.name.tag.idl"
         },
         {
             "comment": "Some reserved words are actually procedures, or at least behave like procedures.  These words here are the 'pure' language statements.",
