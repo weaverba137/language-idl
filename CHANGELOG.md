@@ -1,5 +1,10 @@
 # Changes
 
+## 0.1.0 - Deprecated directory.
+
+* Store package settings in `settings/` instead of `scoped-properties/`.
+* Update package.json file.
+
 ## 0.0.8 - Indentation
 
 * Add some basic support for auto-indent.

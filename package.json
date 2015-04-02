@@ -1,11 +1,18 @@
 {
-  "name": "language-idl",
-  "version": "0.0.8",
-  "description": "IDL language support in Atom",
-  "repository": "https://github.com/weaverba137/language-idl",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
-  },
-  "dependencies": {}
+    "name": "language-idl",
+    "version": "0.1.0",
+    "description": "IDL language support in Atom",
+    "homepage": "https://github.com/weaverba137/language-idl",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/weaverba137/language-idl"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/weaverba137/language-idl/issues"
+    },
+    "engines": {
+        "atom": "*",
+        "node": "*"
+    }
 }
