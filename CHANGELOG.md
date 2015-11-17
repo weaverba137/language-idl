@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.1 - Switches and Other Infrastructure.
+## 0.3.0 - Switches and Other Infrastructure.
 
 * Highlight function and procedure switches, *e.g.*, `MESSAGE, 'Hello!', /INFORMATIONAL`.
 * Start adding snippets.
