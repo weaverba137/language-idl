@@ -62,6 +62,11 @@
             "name": "string.quoted.double.idl"
         },
         {
+            "comment": "IDL switches (e.g. /switch) set a keyword without giving it a specific value, though the value is supposed to evaluate as True.",
+            "match": "(?:,)\\s*/\\w+\\b",
+            "name": "meta.keyword.idl"
+        },
+        {
             "include": "#functions"
         },
         {

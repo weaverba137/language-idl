@@ -1,5 +1,9 @@
 # Changes
 
+## 0.2.1 - Switches
+
+* Highlight function and procedure switches, *e.g.*, `MESSAGE, 'Hello!', /INFORMATIONAL`.
+
 ## 0.2.0 - Deprecated directory.
 
 * Store package settings in `settings/` instead of `scoped-properties/`.
