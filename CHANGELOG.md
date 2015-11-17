@@ -1,10 +1,12 @@
 # Changes
 
-## 0.2.1 - Switches
+## 0.2.1 - Switches and Other Infrastructure.
 
 * Highlight function and procedure switches, *e.g.*, `MESSAGE, 'Hello!', /INFORMATIONAL`.
+* Start adding snippets.
+* Add spec tests.
 
-## 0.2.0 - Deprecated directory.
+## 0.2.0 - Deprecated Directory
 
 * Store package settings in `settings/` instead of `scoped-properties/`.
 * Update package.json file.
