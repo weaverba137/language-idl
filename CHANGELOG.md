@@ -1,9 +1,10 @@
 # Changes
 
-## 0.1.0 - Deprecated directory.
+## 0.2.0 - Deprecated directory.
 
 * Store package settings in `settings/` instead of `scoped-properties/`.
 * Update package.json file.
+* Due to some minor confusion, there was no 0.1.0 official release. Tags v0.1.0 and v0.2.0 are identical.
 
 ## 0.0.8 - Indentation
 
