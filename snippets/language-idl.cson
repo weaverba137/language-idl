@@ -1,0 +1,4 @@
+'.source.idl':
+  'keyword_set …':
+    'prefix': 'keyword_set'
+    'body': 'KEYWORD_SET(${1:keyword})'

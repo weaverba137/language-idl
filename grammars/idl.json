@@ -23,7 +23,7 @@
         },
         {
             "comment": "Labels, as in the destination of GOTO, fail.",
-            "match": "^\\s*\\S+(?=:)",
+            "match": "^\\s*\\w+(?=:)",
             "name": "entity.name.tag.idl"
         },
         {
@@ -32,14 +32,29 @@
             "name": "keyword.control.idl"
         },
         {
-            "comment": "These are the 'text' operators in IDL.",
-            "match": "\\b(?i:and|eq|ge|gt|le|lt|mod|ne|not|or|xor)=?\\b",
-            "name": "keyword.operator.idl"
+            "comment": "These are the bitwise operators in IDL (MOD is not bitwise, but we'll throw it in here).",
+            "match": "\\b(?i:and|mod|not|xor)=?\\b",
+            "name": "keyword.operator.arithmetic.idl"
+        },
+        {
+            "comment": "These are the bitwise operators in IDL (MOD is not bitwise, but we'll throw it in here).",
+            "match": "\\b(?i:and|mod|not|xor)=?\\b",
+            "name": "keyword.operator.arithmetic.idl"
+        },
+        {
+            "comment": "Basic arithmetic operators.",
+            "match": "\\+|\\-|\\*|/|\\^",
+            "name": "keyword.operator.arithmetic.idl"
+        },
+        {
+            "comment": "These are the comparison operators in IDL.",
+            "match": "\\b(?i:eq|ge|gt|le|lt|ne)\\b",
+            "name": "keyword.operator.comparison.idl"
         },
         {
             "comment": "Logical operators",
-            "match": "(?:~|&&|\\|\\|)",
-            "name": "keyword.operator.idl"
+            "match": "\\b(?:~|&&|\\|\\|)\\b",
+            "name": "keyword.operator.logical.idl"
         },
         {
             "comment": "The system variables.  Some are read-only, some are not & they can be created on the fly.",
@@ -60,6 +75,15 @@
             "comment": "IDL strings are very similar to Python strings; single & double quotes are equivalent.",
             "match": "\"[^\"]*\"",
             "name": "string.quoted.double.idl"
+        },
+        {
+            "comment": "IDL switches (e.g. /switch) set a keyword without giving it a specific value, though the value is supposed to evaluate as True.",
+            "match": "(^|,)\\s*(/)(\\w+)\\b",
+            "captures": {
+                "1": {"name": "punctuation.separator.parameters.idl"},
+                "2": {"name": "keyword.operator.assignment.idl"},
+                "3": {"name": "variable.parameter.function.idl"}
+            }
         },
         {
             "include": "#functions"
