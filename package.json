@@ -1,6 +1,6 @@
 {
   "name": "language-idl",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "IDL language support in Atom",
   "homepage": "https://github.com/weaverba137/language-idl",
   "repository": {
