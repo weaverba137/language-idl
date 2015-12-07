@@ -28,7 +28,7 @@
         },
         {
             "comment": "Some reserved words are actually procedures, or at least behave like procedures.  These words here are the 'pure' language statements.",
-            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|end|forward_function|for|function|goto|if|inherits|of|pro|repeat|switch|then|until|while)\\b",
+            "match": "\\b(?<!/)(?i:begin|break|case|common|compile_opt|continue|do|else|endcase|endelse|endfor|endif|endrep|endswitch|endwhile|endforeach|end|forward_function|for|function|goto|if|inherits|of|pro|repeat|switch|then|until|while|foreach)\\b",
             "name": "keyword.control.idl"
         },
         {
