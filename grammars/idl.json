@@ -37,11 +37,6 @@
             "name": "keyword.operator.arithmetic.idl"
         },
         {
-            "comment": "These are the bitwise operators in IDL (MOD is not bitwise, but we'll throw it in here).",
-            "match": "\\b(?i:and|mod|not|xor)=?\\b",
-            "name": "keyword.operator.arithmetic.idl"
-        },
-        {
             "comment": "Basic arithmetic operators.",
             "match": "\\+|\\-|\\*|/|\\^",
             "name": "keyword.operator.arithmetic.idl"

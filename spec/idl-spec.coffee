@@ -63,3 +63,21 @@ describe 'IDL grammar', ->
         expect(tokens[1][2].value).toBe 'baz'
         expect(tokens[1][2].scopes).toEqual ['source.idl', 'variable.parameter.function.idl']
         expect(tokens[1][3].value).toBe ')'
+
+    it 'tokenizes simple comparisons', ->
+        tokens = grammar.tokenizeLines 'IF 10 GT 5 THEN'
+
+        expect(tokens[0][0].value).toBe 'IF'
+        expect(tokens[0][0].scopes).toEqual ['source.idl', 'keyword.control.idl']
+        expect(tokens[0][1].value).toBe ' '
+        expect(tokens[0][2].value).toBe '10'
+        expect(tokens[0][2].scopes).toEqual ['source.idl', 'constant.numeric.idl']
+        expect(tokens[0][3].value).toBe ' '
+        expect(tokens[0][4].value).toBe 'GT'
+        expect(tokens[0][4].scopes).toEqual ['source.idl', 'keyword.operator.comparison.idl']
+        expect(tokens[0][5].value).toBe ' '
+        expect(tokens[0][6].value).toBe '5'
+        expect(tokens[0][6].scopes).toEqual ['source.idl', 'constant.numeric.idl']
+        expect(tokens[0][7].value).toBe ' '
+        expect(tokens[0][8].value).toBe 'THEN'
+        expect(tokens[0][8].scopes).toEqual ['source.idl', 'keyword.control.idl']
