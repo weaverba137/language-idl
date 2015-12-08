@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.1 - NO CHANGES YET
+
+* No changes yet.
+
 ## 0.4.0 - FOREACH
 
 * Added highlighting of `FOREACH` (PR #4).
