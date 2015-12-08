@@ -5,6 +5,7 @@
 * Added highlighting of `FOREACH` (PR #4).
 * Ignore JavaScript files compiled from CoffeeScript.
 * Add more tests.
+* Run tests on [Travis](https://travis-ci.org/weaverba137/language-idl).
 
 ## 0.3.0 - Switches and Other Infrastructure.
 

@@ -26,6 +26,10 @@ Currently this package supports highlighting for
   * Other scientific data formats still to be added.
 * Basic automatic indentation.
 
+## Test Status
+
+* [![Build Status](https://travis-ci.org/weaverba137/language-idl.svg?branch=master)](https://travis-ci.org/weaverba137/language-idl)
+
 ## Future Development
 
 * Scientific data format built-ins (`HDF`, `H5`, `EOS`).
