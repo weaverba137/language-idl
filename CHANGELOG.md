@@ -1,13 +1,13 @@
 # Changes
 
-## 0.3.1 - FOREACH (unreleased)
+## 0.4.0 - FOREACH
 
 * Added highlighting of `FOREACH` (PR #4).
 * Ignore JavaScript files compiled from CoffeeScript.
 * Add more tests.
 * Run tests on [Travis](https://travis-ci.org/weaverba137/language-idl).
 
-## 0.3.0 - Switches and Other Infrastructure.
+## 0.3.0 - Switches and Other Infrastructure
 
 * Highlight function and procedure switches, *e.g.*, `MESSAGE, 'Hello!', /INFORMATIONAL`.
 * Start adding snippets.
