@@ -15,11 +15,14 @@ describe 'IDL grammar', ->
     it 'tokenizes inline comments', ->
         tokens = grammar.tokenizeLines 'foo = bar ; comment'
 
-        expect(tokens[0][0].value).toBe 'foo = bar '
-        expect(tokens[0][1].value).toBe ';'
-        expect(tokens[0][1].scopes).toEqual ['source.idl', 'comment.line.semicolon.idl', 'punctuation.definition.comment.idl']
-        expect(tokens[0][2].value).toBe ' comment'
-        expect(tokens[0][2].scopes).toEqual ['source.idl', 'comment.line.semicolon.idl']
+        expect(tokens[0][0].value).toBe 'foo '
+        expect(tokens[0][1].value).toBe '='
+        expect(tokens[0][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[0][2].value).toBe ' bar '
+        expect(tokens[0][3].value).toBe ';'
+        expect(tokens[0][3].scopes).toEqual ['source.idl', 'comment.line.semicolon.idl', 'punctuation.definition.comment.idl']
+        expect(tokens[0][4].value).toBe ' comment'
+        expect(tokens[0][4].scopes).toEqual ['source.idl', 'comment.line.semicolon.idl']
 
     it 'tokenizes leading comments', ->
         tokens = grammar.tokenizeLines ';\n; this is a comment\n;\n'
@@ -42,21 +45,27 @@ describe 'IDL grammar', ->
     it 'tokenizes keyword switches', ->
         tokens = grammar.tokenizeLines 'foo = bar(a,b,c,d,/baz)'
 
-        expect(tokens[0][0].value).toBe 'foo = bar(a,b,c,d'
+        expect(tokens[0][0].value).toBe 'foo '
         expect(tokens[0][0].scopes).toEqual ['source.idl']
-        expect(tokens[0][1].value).toBe ','
-        expect(tokens[0][1].scopes).toEqual ['source.idl', 'punctuation.separator.parameters.idl']
-        expect(tokens[0][2].value).toBe '/'
-        expect(tokens[0][2].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
-        expect(tokens[0][3].value).toBe 'baz'
-        expect(tokens[0][3].scopes).toEqual ['source.idl', 'variable.parameter.function.idl']
-        expect(tokens[0][4].value).toBe ')'
-        expect(tokens[0][4].scopes).toEqual ['source.idl']
+        expect(tokens[0][1].value).toBe '='
+        expect(tokens[0][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[0][2].value).toBe ' bar(a,b,c,d'
+        expect(tokens[0][3].value).toBe ','
+        expect(tokens[0][3].scopes).toEqual ['source.idl', 'punctuation.separator.parameters.idl']
+        expect(tokens[0][4].value).toBe '/'
+        expect(tokens[0][4].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[0][5].value).toBe 'baz'
+        expect(tokens[0][5].scopes).toEqual ['source.idl', 'variable.parameter.function.idl']
+        expect(tokens[0][6].value).toBe ')'
+        expect(tokens[0][6].scopes).toEqual ['source.idl']
 
     it 'tokenizes keyword switches on multiple lines', ->
         tokens = grammar.tokenizeLines 'foo = bar(a,b,c,d, $\n          /baz)'
 
-        expect(tokens[0][0].value).toBe 'foo = bar(a,b,c,d, $'
+        expect(tokens[0][0].value).toBe 'foo '
+        expect(tokens[0][1].value).toBe '='
+        expect(tokens[0][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[0][2].value).toBe ' bar(a,b,c,d, $'
         expect(tokens[1][0].value).toBe '          '
         expect(tokens[1][1].value).toBe '/'
         expect(tokens[1][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
@@ -81,3 +90,19 @@ describe 'IDL grammar', ->
         expect(tokens[0][7].value).toBe ' '
         expect(tokens[0][8].value).toBe 'THEN'
         expect(tokens[0][8].scopes).toEqual ['source.idl', 'keyword.control.idl']
+
+    it 'tokenizes system variables', ->
+        tokens = grammar.tokenizeLines 'fpi = !pi\npi = !DPI'
+
+        expect(tokens[0][0].value).toBe 'fpi '
+        expect(tokens[0][1].value).toBe '='
+        expect(tokens[0][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[0][2].value).toBe ' '
+        expect(tokens[0][3].value).toBe '!pi'
+        expect(tokens[0][3].scopes).toEqual ['source.idl', 'constant.language.idl']
+        expect(tokens[1][0].value).toBe 'pi '
+        expect(tokens[1][1].value).toBe '='
+        expect(tokens[1][1].scopes).toEqual ['source.idl', 'keyword.operator.assignment.idl']
+        expect(tokens[1][2].value).toBe ' '
+        expect(tokens[1][3].value).toBe '!DPI'
+        expect(tokens[1][3].scopes).toEqual ['source.idl', 'constant.language.idl']
